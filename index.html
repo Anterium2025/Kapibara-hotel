@@ -103,12 +103,6 @@
             width: 45%;
         }
 
-        .hero-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         /* About Section */
         #about {
             padding: 80px 20px;
@@ -133,12 +127,6 @@
         .about-images {
             display: flex;
             justify-content: space-around;
-        }
-
-        .about-images img {
-            width: 45%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Benefits Section */
@@ -169,11 +157,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .benefit img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
         .benefit h3 {
             font-size: 24px;
             margin-bottom: 15px;
@@ -200,7 +183,8 @@
             color: #2c3e50;
         }
 
-        .testimonial-slider {            /* Add styling for the slider here (JavaScript will handle the functionality) */
+        .testimonial-slider {
+            /* Add styling for the slider here (JavaScript will handle the functionality) */
             /* This is just a placeholder */
             border: 1px solid #ddd;
             padding: 20px;
@@ -214,8 +198,7 @@
 
         /* Gallery Section */
         #gallery {
-            background-color: #f0f0f0;
-            padding: 80px 20px;
+            background-color: #f0f0f0;            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -231,12 +214,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -263,7 +240,8 @@
         }
 
         .social-links a {
-            display: inline-block;margin-right: 15px;
+            display: inline-block;
+            margin-right: 15px;
         }
 
         .social-links img {
@@ -288,8 +266,7 @@
                 flex-direction: column;
             }
 
-            nav ul li {
-                margin-left: 0;
+            nav ul li {margin-left: 0;
                 margin-bottom: 10px;
             }
 
@@ -309,11 +286,6 @@
 
             .about-images {
                 flex-direction: column;
-            }
-
-            .about-images img {
-                width: 100%;
-                margin-bottom: 20px;
             }
 
             .footer-content {
@@ -350,7 +322,8 @@
             <a href="booking.html" class="button">Забронировать сейчас</a>
         </div>
         <div class="hero-image">
-            <img src="images/capybara_hero.jpg" alt="Капибары в отеле">
+           <!-- Placeholder for Hero Image -->
+           (Место для главного изображения)
         </div>
     </section>
 
@@ -358,8 +331,8 @@
         <h2>О нас</h2>
         <p>Капибара Рай - это уникальный отель, где вы можете отдохнуть в компании самых дружелюбных животных в мире - капибар. Мы предлагаем комфортабельные номера, вкусную еду и множество развлечений для всей семьи.</p>
         <div class="about-images">
-            <img src="images/capybara_hotel_1.jpg" alt="Отель">
-            <img src="images/capybara_hotel_2.jpg" alt="Капибара и гость">
+           <!-- Placeholders for About Images -->
+           (Место для изображений "О нас")
         </div>
     </section>
 
@@ -367,22 +340,22 @@
         <h2>Почему выбирают нас?</h2>
         <div class="benefits-grid">
             <div class="benefit">
-                <img src="icons/capybara.png" alt="Капибары">
+               <!-- Placeholder for Capybara Icon -->
                 <h3>Уникальный опыт</h3>
                 <p>Общение с капибарами - это незабываемо!</p>
             </div>
             <div class="benefit">
-                <img src="icons/comfort.png" alt="Комфорт">
+                <!-- Placeholder for Comfort Icon -->
                 <h3>Комфорт</h3>
                 <p>Уютные номера и все удобства для вашего отдыха.</p>
             </div>
             <div class="benefit">
-                <img src="icons/food.png" alt="Еда">
+                <!-- Placeholder for Food Icon -->
                 <h3>Вкусная еда</h3>
                 <p>Наслаждайтесь вкусными и полезными блюдами.</p>
             </div>
             <div class="benefit">
-                <img src="icons/family.png" alt="Семья">
+                <!-- Placeholder for Family Icon -->
                 <h3>Для всей семьи</h3>
                 <p>Развлечения и занятия для детей и взрослых.</p>
             </div>
@@ -407,10 +380,8 @@
     <section id="gallery">
         <h2>Галерея</h2>
         <div class="gallery-grid">
-            <img src="images/gallery_1.jpg" alt="Фото">
-            <img src="images/gallery_2.jpg" alt="Фото">
-            <img src="images/gallery_3.jpg" alt="Фото">
-            <img src="images/gallery_4.jpg" alt="Фото">
+           <!-- Placeholders for Gallery Images -->
+           (Место для изображений галереи)
         </div>
     </section>
 
@@ -424,8 +395,8 @@
             </div>
             <div class="social-links">
                 <h3>Мы в социальных сетях</h3>
-                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
             </div>
         </div>
         <p class="copyright">&copy; 2023 Капибара Рай. Все права защищены.</p>
@@ -453,6 +424,16 @@
             showTestimonial(currentIndex); // Initial display
             setInterval(nextTestimonial, 5000); // Change every 5 seconds
           }
+
+          // Simple Navigation
+          const navLinks = document.querySelectorAll('nav ul li a, .button');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+              event.preventDefault(); // Prevent default link behavior
+              const href = this.getAttribute('href');
+              window.location.href = href; // Redirect to the link's URL
+            });
+          });
         });
     </script>
 </body>
