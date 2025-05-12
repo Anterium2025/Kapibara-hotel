@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Капибара Рай - Отель для любителей капибар</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Styles (встроены в HTML) */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;        }
+
+        .hero-image {
+            width: 45%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .about-images {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .about-images img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Benefits Section */
+        #benefits {
+            background-color: #f0f0f0;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #benefits h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .benefit h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .benefit p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .testimonial-slider {            /* Add styling for the slider here (JavaScript will handle the functionality) */
+            /* This is just a placeholder */
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .testimonial {
+            /* Styling for individual testimonials */
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background-color: #f0f0f0;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #gallery h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3, .social-links h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;margin-right: 15px;
+        }
+
+        .social-links img {
+            width: 30px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            #hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .about-images {
+                flex-direction: column;
+            }
+
+            .about-images img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .contact-info, .social-links {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Капибара Рай</div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rooms.html">Номера</a></li>
+                <li><a href="capybaras.html">Капибары</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <a href="booking.html" class="button">Забронировать</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Добро пожаловать в Капибара Рай!</h1>
+            <p>Ваш оазис спокойствия и милоты. Отдохните в окружении дружелюбных капибар, насладитесь комфортом и уникальным опытом.</p>
+            <a href="booking.html" class="button">Забронировать сейчас</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/capybara_hero.jpg" alt="Капибары в отеле">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Капибара Рай - это уникальный отель, где вы можете отдохнуть в компании самых дружелюбных животных в мире - капибар. Мы предлагаем комфортабельные номера, вкусную еду и множество развлечений для всей семьи.</p>
+        <div class="about-images">
+            <img src="images/capybara_hotel_1.jpg" alt="Отель">
+            <img src="images/capybara_hotel_2.jpg" alt="Капибара и гость">
+        </div>
+    </section>
+
+    <section id="benefits">
+        <h2>Почему выбирают нас?</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <img src="icons/capybara.png" alt="Капибары">
+                <h3>Уникальный опыт</h3>
+                <p>Общение с капибарами - это незабываемо!</p>
+            </div>
+            <div class="benefit">
+                <img src="icons/comfort.png" alt="Комфорт">
+                <h3>Комфорт</h3>
+                <p>Уютные номера и все удобства для вашего отдыха.</p>
+            </div>
+            <div class="benefit">
+                <img src="icons/food.png" alt="Еда">
+                <h3>Вкусная еда</h3>
+                <p>Наслаждайтесь вкусными и полезными блюдами.</p>
+            </div>
+            <div class="benefit">
+                <img src="icons/family.png" alt="Семья">
+                <h3>Для всей семьи</h3>
+                <p>Развлечения и занятия для детей и взрослых.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Отзывы</h2>
+        <div class="testimonial-slider">
+            <!-- Здесь будет слайдер с отзывами -->
+            <div class="testimonial">
+                <p>"Прекрасное место для отдыха! Капибары просто очаровательны, а персонал очень дружелюбный."</p>
+                <p>- Анна И.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Мы провели незабываемые выходные в Капибара Рай.  Дети были в восторге от капибар!"</p>
+                <p>- Семья Петровых</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="images/gallery_1.jpg" alt="Фото">
+            <img src="images/gallery_2.jpg" alt="Фото">
+            <img src="images/gallery_3.jpg" alt="Фото">
+            <img src="images/gallery_4.jpg" alt="Фото">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Контактная информация</h3>
+                <p>Адрес: Улица Капибар, 123</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: info@capybaraparadise.ru</p>
+            </div>
+            <div class="social-links">
+                <h3>Мы в социальных сетях</h3>
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2023 Капибара Рай. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // JavaScript Code (встроен в HTML)
+        document.addEventListener('DOMContentLoaded', function() {
+          const slider = document.querySelector('.testimonial-slider');
+          const testimonials = document.querySelectorAll('.testimonial');
+          let currentIndex = 0;
+
+          function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+              testimonial.style.display = i === index ? 'block' : 'none';
+            });
+          }
+
+          function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+          }
+
+          if (slider && testimonials.length > 0) {
+            showTestimonial(currentIndex); // Initial display
+            setInterval(nextTestimonial, 5000); // Change every 5 seconds
+          }
+        });
+    </script>
+</body>
+</html>
